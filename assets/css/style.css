@@ -196,13 +196,19 @@ textarea.form-control {
 .btn-group-lg > .btn {
 	padding: 10px 25px;
 	font-size: 13px;
-    background: rgba(17, 17, 17, 0.8);
+		background: #31708f;
+    /*background: rgba(17, 17, 17, 0.8);*/
     color: #fff;
+		color: black;
+		background: rgba(135, 135, 135, 0.5);
 }
 .btn-lg:hover,
 .btn-group-lg > .btn:hover{
-    background: rgba(17, 17, 17, 1.8);
-    color: #fff;
+    /*background: rgba(17, 17, 17, 1.8);*/
+		/*background: #318f4e;*/
+    /*color: #fff;*/
+		background: #31708f;
+		color: #fff;
 }
 
 .btn-sm,
@@ -409,7 +415,7 @@ textarea.form-control {
 .iconbox-icon {
 	margin: 0 0 15px;
 	font-size: 32px;
-	color: #222;
+	color: #31708f;
 }
 
 .iconbox-title {
@@ -460,7 +466,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 #footer {
-	background: #222;
+	background: #31708f;;
 	text-align: center;
 	padding: 40px 0;
 	color: #FFF;
@@ -549,13 +555,14 @@ textarea.form-control {
 .navbar-custom .navbar-nav > li.active a {
 	background: none;
 	outline: 0;
-	color: #E7746F;
+	color: #6fa9e7;
 }
 
 .navbar-custom .navbar-brand {
 	font-weight: 700;
 	font-size: 22px;
-    font-family: Lobster, cursive;
+    /*font-family: Lobster, cursive;*/
+		font-family: Lato, regular;
 }
 
 .navbar-custom .dropdown-menu {
