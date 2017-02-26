@@ -163,7 +163,7 @@
 							success		: function(res){
 											var ret = $.parseJSON(JSON.stringify(res));
 //											response.html(ret.message).fadeIn(500);
-                                            response.html('<i class="fa fa-success"></i> E-mail enviado, agradeço o contato.').fadeIn(100).fadeOut(1200);
+                                            response.html('<i class="fa fa-success">E-mail enviado, agradeço o contato.</i> ').fadeIn(100).fadeOut(1200);
 
 							}
 						});
