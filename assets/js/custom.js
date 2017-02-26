@@ -162,7 +162,9 @@
 							encode      : true,
 							success		: function(res){
 											var ret = $.parseJSON(JSON.stringify(res));
-											response.html(ret.message).fadeIn(500);
+//											response.html(ret.message).fadeIn(500);
+                                            response.html('<i class="fa fa-success"></i> E-mail enviado com sucesso haha.').fadeIn(700);
+
 							}
 						});
 				}           
