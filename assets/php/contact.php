@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Orgin: *");
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: *");
 
 if(isset($_POST['message'])){
