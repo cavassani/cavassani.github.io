@@ -149,7 +149,7 @@
 
 			if (( c_name== '' || c_email == '' || c_message == '') || (!isValidEmailAddress(c_email) )) {
 				response.fadeIn(500);
-				response.html('<i class="fa fa-warning"></i> Please fix the errors and try again.');
+				response.html('<i class="fa fa-warning"></i> Por favor preencha os campos para poder enviar o e-mail.');
 			}
 
 			else {
