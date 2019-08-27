@@ -25,6 +25,7 @@ if(isset($_POST['message'])){
 		$res['message'] = 'Mensagem de contato enviada com sucesso';
     }
 	else{
+		//$res = error_get_last()['message'];
 		$res['message'] = 'Falha na tentativa de enviar e-mail. Por favor me envie um e-mail para marceloscavassani@gmail.com';
 	}
 
