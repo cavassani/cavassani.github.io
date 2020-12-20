@@ -159,11 +159,12 @@
 								response.html(ret.message).fadeIn(500);
 				                response.html('<i class="fa fa-success">E-mail enviado, agradeço o contato.</i> ')
 				                .fadeIn(50).fadeOut(3000);
+				                setTimeout(function() {
+               						window.location.reload();
+          						},6000);
 							}
 			});
-			setTimeout(function() {
-               window.location.reload();
-          	},6000);
+
             	return false;
 			});
 
