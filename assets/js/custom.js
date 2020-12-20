@@ -140,34 +140,30 @@
 			var c_email = $('#c_email').val();
 			var c_message = $('#c_message ').val();
 			var response = $('#contact-form .ajax-response');
-			
+
 			var formData = {
 				'name'       : c_name,
 				'email'      : c_email,
 				'message'    : c_message
 			};
 
-			if (( c_name== '' || c_email == '' || c_message == '') || (!isValidEmailAddress(c_email) )) {
-				response.fadeIn(500);
-				response.html('<i class="fa fa-warning"></i> Por favor preencha os campos para poder enviar o e-mail.');
-			}
 
-			else {
-					 $.ajax({
-							type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-//							url         : 'assets/php/contact.php', // the url where we want to POST
-                            url         : "https://formspree.io/marceloscavassani@gmail.com", //mnda email pelo formspree
-							data        : formData, // our data object
-							dataType    : 'json', // what type of data do we expect back from the server
-							encode      : true,
-							success		: function(res){
-											var ret = $.parseJSON(JSON.stringify(res));
-//											response.html(ret.message).fadeIn(500);
-                                            response.html('<i class="fa fa-success">E-mail enviado, agradeço o contato.</i> ').fadeIn(50).fadeOut(3000);
-
+			$.ajax({
+				type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+				url         : "https://formspree.io/marceloscavassani@gmail.com", //mnda email pelo formspree
+				data        : formData, // our data object
+				dataType    : 'json', // what type of data do we expect back from the server
+				encode      : true,
+				success		: function(res){
+								var ret = $.parseJSON(JSON.stringify(res));
+								response.html(ret.message).fadeIn(500);
+				                response.html('<i class="fa fa-success">E-mail enviado, agradeço o contato.</i> ')
+				                .fadeIn(50).fadeOut(3000);
 							}
-						});
-				}           
+			});
+			setTimeout(function() {
+               window.location.reload();
+          	},6000);
             	return false;
 			});
 
