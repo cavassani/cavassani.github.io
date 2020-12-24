@@ -5,7 +5,7 @@ function requestUserRepositories(username) {
   //Github Endpoint. retorna os repositorios do user pelo username
   //const url = `https://api.github.com/users/${username}/repos`;
   const url = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${username}`
-  var v = 0;
+  var i=0;
 
   //Abrindo conexão, usando requisição tipo GET pelo Endpoint
   //Mandando 3 argumentos (GET/POST, URL, Async true/false)
@@ -23,7 +23,7 @@ console.log(data);
 
 
     data.forEach(function(e) {
-      var i=0;
+
       let div = document.getElementById("github-repos");
 
       console.log(row);
@@ -65,6 +65,8 @@ console.log(data);
       divDesc.classList.add("iconbox-desc");
       divDesc.innerHTML = (`${data[i].description}`);
       divText.appendChild(divDesc);
+      i++;
+            console.log(i);
     });
 
     }
