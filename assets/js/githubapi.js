@@ -16,17 +16,16 @@ function requestUserRepositories(username) {
   xhr.onload = function() {
     //data parse pra Json
     const data = JSON.parse(this.response);
-console.log(data);
+
     let row = document.createElement("row");
     row.classList.add("linha-");
     row.style.cssText ="display:flex; flex-direction: row; justify-content: center; align-items: center";
 
-
+    //loop criando cards com os repos
     data.forEach(function(e) {
 
       let div = document.getElementById("github-repos");
 
-      console.log(row);
       let rowSelected = row;
       div.appendChild(rowSelected);
 
@@ -65,17 +64,16 @@ console.log(data);
       divDesc.classList.add("iconbox-desc");
       divDesc.innerHTML = (`${data[i].description}`);
       divText.appendChild(divDesc);
+
       i++;
-            console.log(i);
+
     });
 
     }
 
-  //}
   //requisição enviada pro servidor
   xhr.send();
 }
 
-// chama função passando string como github username
-
+// chama função passando como string github username
 requestUserRepositories("cavassani");
