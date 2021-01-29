@@ -5,7 +5,7 @@ function requestUserRepositories(username) {
   //Github Endpoint. retorna os repositorios do user pelo username
   //const url = `https://api.github.com/users/${username}/repos`;
   const url = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${username}`
-  var i=0;
+  var i = 0;
 
   //Abrindo conexão, usando requisição tipo GET pelo Endpoint
   //Mandando 3 argumentos (GET/POST, URL, Async true/false)
@@ -19,7 +19,7 @@ function requestUserRepositories(username) {
 
     let row = document.createElement("row");
     row.classList.add("linha-");
-    row.style.cssText ="display:flex; flex-direction: row; justify-content: center; align-items: center";
+    row.style.cssText = "display:flex; flex-direction: row; justify-content: center; align-items: center";
 
     //loop criando cards com os repos
     data.forEach(function(e) {
@@ -69,7 +69,7 @@ function requestUserRepositories(username) {
 
     });
 
-    }
+  }
 
   //requisição enviada pro servidor
   xhr.send();
