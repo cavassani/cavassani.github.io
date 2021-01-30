@@ -3,8 +3,8 @@ function requestUserRepositories(username) {
   const xhr = new XMLHttpRequest();
 
   //Github Endpoint. retorna os repositorios do user pelo username
-  //const url = `https://api.github.com/users/${username}/repos`;
-  const url = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${username}`
+  const url = `https://api.github.com/users/${username}/repos`;
+  //const url = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${username}`
   var i = 0;
 
   //Abrindo conexão, usando requisição tipo GET pelo Endpoint
@@ -19,11 +19,9 @@ function requestUserRepositories(username) {
 
     let row = document.createElement("row");
     row.classList.add("linha-");
-    row.style.cssText = "display:flex; flex-direction: row; justify-content: center; align-items: center";
-
+    row.style.cssText = " display: grid; grid-template-columns: repeat(4, 277px)";
     //loop criando cards com os repos
     data.forEach(function(e) {
-
       let div = document.getElementById("github-repos");
 
       let rowSelected = row;
@@ -31,6 +29,7 @@ function requestUserRepositories(username) {
 
       let divCol = document.createElement("div");
       divCol.classList.add("col-md-3");
+      divCol.classList.add("teste");
       row.appendChild(divCol);
       let divIconFather = document.createElement("div");
       divIconFather.classList.add("iconbox");
@@ -43,7 +42,7 @@ function requestUserRepositories(username) {
       let link = document.createElement("a");
       link.title = "";
       link.target = "_blank";
-      link.href = (`${data[i].link}`);
+      link.href = (`${data[i].git_url}`);
       divIcon.appendChild(link);
 
       let spanIcon = document.createElement("span");
@@ -57,7 +56,7 @@ function requestUserRepositories(username) {
       let h3 = document.createElement("h3");
       h3.classList.add("iconbox-title");
       divText.appendChild(h3);
-      h3.innerHTML = (`${data[i].repo}`);
+      h3.innerHTML = (`${data[i].name}`);
       divText.appendChild(h3);
 
       let divDesc = document.createElement("div");
