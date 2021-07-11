@@ -4,7 +4,7 @@ function requestUserRepositories(username) {
 
   //Github Endpoint. retorna os repositorios do user pelo username
   const url = `https://api.github.com/users/${username}/repos`;
-  //const url = `https://gh-pinned-repos-5l2i19um3.vercel.app/?username=${username}`
+
   var i = 0;
 
   //Abrindo conexão, usando requisição tipo GET pelo Endpoint
@@ -42,7 +42,7 @@ function requestUserRepositories(username) {
       let link = document.createElement("a");
       link.title = "";
       link.target = "_blank";
-      link.href = (`${data[i].git_url}`);
+      link.href = (`${data[i].html_url}`);
       divIcon.appendChild(link);
 
       let spanIcon = document.createElement("span");
