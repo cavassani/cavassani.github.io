@@ -1,36 +1,21 @@
 function requestUserRepositories(username) {
-  //cria um objeto XHMLHttpRequest
   const xhr = new XMLHttpRequest();
-
-  //Github Endpoint. retorna os repositorios do user pelo username
   const url = `https://api.github.com/users/${username}/repos`;
 
-  var i = 0;
-
-  //Abrindo conexão, usando requisição tipo GET pelo Endpoint
-  //Mandando 3 argumentos (GET/POST, URL, Async true/false)
   xhr.open("GET", url, true);
 
-  //quando a requisição for recebida
-  //vai ser processada aqui
   xhr.onload = function() {
-    //data parse pra Json
     const data = JSON.parse(this.response);
 
-    let row = document.createElement("row");
-    row.classList.add("linha-");
-    row.style.cssText = " display: grid; grid-template-columns: repeat(4, 277px)";
-    //loop criando cards com os repos
-    data.forEach(function(e) {
-      let div = document.getElementById("github-repos");
+    let row = document.createElement("div");
+    row.classList.add("row");
 
-      let rowSelected = row;
-      div.appendChild(rowSelected);
-
+    data.forEach(function(repo) {
       let divCol = document.createElement("div");
-      divCol.classList.add("col-md-3");
+      divCol.classList.add("col-sm-6", "col-md-3");
       divCol.classList.add("teste");
       row.appendChild(divCol);
+
       let divIconFather = document.createElement("div");
       divIconFather.classList.add("iconbox");
       divCol.appendChild(divIconFather);
@@ -42,7 +27,7 @@ function requestUserRepositories(username) {
       let link = document.createElement("a");
       link.title = "";
       link.target = "_blank";
-      link.href = (`${data[i].html_url}`);
+      link.href = repo.html_url;
       divIcon.appendChild(link);
 
       let spanIcon = document.createElement("span");
@@ -55,22 +40,23 @@ function requestUserRepositories(username) {
 
       let h3 = document.createElement("h3");
       h3.classList.add("iconbox-title");
-      divText.appendChild(h3);
-      h3.innerHTML = (`${data[i].name}`);
+      h3.innerHTML = repo.name;
       divText.appendChild(h3);
 
       let divDesc = document.createElement("div");
       divDesc.classList.add("iconbox-desc");
-      divDesc.innerHTML = (`${data[i].description}`);
+      divDesc.innerHTML = repo.description;
       divText.appendChild(divDesc);
-
-      i++;
-
     });
 
+    document.getElementById("github-repos").appendChild(row);
   }
 
-  //requisição enviada pro servidor
+  xhr.onerror = function() {
+    document.getElementById("github-repos").innerHTML =
+      '<p class="text-center">Nao foi possivel carregar os repositorios do GitHub.</p>';
+  }
+
   xhr.send();
 }
 
