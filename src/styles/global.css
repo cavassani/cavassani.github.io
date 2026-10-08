@@ -11,8 +11,87 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: #1a1a1a;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.top-navbar {
+  display: inline-flex;
+  background-color: #0b2559;
+  border-bottom: 3px solid #d4af37;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links a {
+  display: block;
+  padding: 14px 28px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 14px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background-color: #163779;
+  color: #ffffff;
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: -4px;
+}
+
+@media print {
+  .navbar-container {
+    display: none;
+  }
+}
+.page-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: min(800px, 100%);
+  margin-bottom: 12px;
+}
+
+.print-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #0b2559;
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background-color: #163779;
+}
+
+.print-button:focus-visible {
+  outline: 3px solid #d4af37;
+  outline-offset: 2px;
 }
 
 .cv-container {
@@ -208,6 +287,14 @@ body {
   body {
     padding: 0;
   }
+  .navbar-container {
+    padding: 12px 12px 0;
+    margin-bottom: 0;
+  }
+  .page-actions {
+    padding: 12px;
+    margin-bottom: 0;
+  }
   .cv-container {
     width: 100%;
   }
@@ -231,5 +318,24 @@ body {
   .job-item {
     grid-template-columns: 1fr;
     gap: 5px;
+  }
+}
+
+@media print {
+  body {
+    display: block;
+    padding: 0;
+    background: #ffffff;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .page-actions {
+    display: none;
+  }
+
+  .cv-container {
+    width: 100%;
+    box-shadow: none;
   }
 }
