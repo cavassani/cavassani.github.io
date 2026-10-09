@@ -8,9 +8,49 @@ import '../styles/global.css';
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Currículo - Marcelo Cavassani</title>
+  <title>Currículo - Marcelo Cavassani | Desenvolvedor Backend & Engenharia de Software</title>
+  <meta name="description" content="Currículo profissional de Marcelo Cavassani - Desenvolvedor Backend com experiência em PHP, Java, Python, Node.js, Bancos de Dados (Oracle, PostgreSQL, MySQL), Suporte a Aplicações Bancárias e Engenharia de Computação." />
+  
   <!-- Ícones FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Microdados Schema.org (JSON-LD) para otimização de IA de recrutamento e robôs de busca (ATS) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marcelo Sanches Cavassani",
+      "jobTitle": "Desenvolvedor Backend / Analista de Engenharia de TI",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Alto Alegre",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "email": "mailto:marceloscavassani@gmail.com",
+      "url": "https://cavassani.github.io/",
+      "sameAs": [
+        "https://github.com/cavassani",
+        "https://linkedin.com/in/marcelo-sanches-cavassani-52249351/"
+      ],
+      "almaMater": "Univesp - Universidade Virtual do Estado de São Paulo",
+      "knowsAbout": [
+        "Desenvolvimento Backend",
+        "PHP",
+        "Java",
+        "Python",
+        "Node.js",
+        "APIs RESTful",
+        "OracleDB",
+        "PostgreSQL",
+        "MySQL",
+        "Engenharia de Computação",
+        "Integração de Sistemas",
+        "Aplicações Bancárias",
+        "Suporte de Aplicação e Banco de Dados"
+      ]
+    }
+  </script>
 </head>
 <body>
   <!-- Navbar Topo -->
@@ -34,11 +74,11 @@ import '../styles/global.css';
     <header class="header">
       <div class="header-content">
         <div class="profile-photo-wrapper">
-          <img src="/foto.jpg" alt="Foto de Perfil" class="profile-photo" />
+          <img src="/foto.jpg" alt="Foto de Perfil de Marcelo Cavassani" class="profile-photo" />
         </div>
         <div class="header-text">
           <h1>MARCELO CAVASSANI</h1>
-          <h2>Desenvolvedor / Engenheiro de Computação</h2>
+          <h2>Desenvolvedor Backend | Engenharia de Computação</h2>
         </div>
       </div>
     </header>
@@ -52,7 +92,7 @@ import '../styles/global.css';
 
       <div class="contact-item">
         <i class="fa-solid fa-envelope"></i>
-        <span>marceloscavassani@gmail.com</span>
+        <a href="mailto:marceloscavassani@gmail.com">marceloscavassani@gmail.com</a>
       </div>
 
       <div class="contact-item">
@@ -65,7 +105,7 @@ import '../styles/global.css';
       <div class="contact-item">
         <i class="fa-brands fa-linkedin"></i>
         <a href="https://linkedin.com/in/marcelo-sanches-cavassani-52249351/" target="_blank" rel="noopener noreferrer">
-          linkedin.com/in/marcelo-sanches-cavassani/
+          linkedin.com/in/marcelo-sanches-cavassani
         </a>
       </div>
     </div>
@@ -79,38 +119,31 @@ import '../styles/global.css';
         <section class="section">
           <h3 class="section-title">PERFIL</h3>
           <p>
-            Desenvolvedor de software com experiência em desenvolvimento web,
-            APIs e integração de sistemas. Experiência com PHP, Java e
-            tecnologias modernas de desenvolvimento, com foco em soluções
-            eficientes, manutenção de sistemas e resolução de problemas.
-            Atualmente cursando Engenharia de Computação e ampliando os
-            conhecimentos em Python e desenvolvimento backend.
+            Desenvolvedor de Software com ampla experiência em desenvolvimento backend,
+            construção e integração de APIs RESTful, suporte a aplicações bancárias e gerenciamento de banco de dados. Sólida atuação na criação de soluções para o mercado imobiliário e ecossistemas financeiros corporativos. Atualmente cursando Engenharia de Computação na Univesp.
           </p>
         </section>
 
         <section class="section">
           <h3 class="section-title">HABILIDADES</h3>
           <ul>
-            <li>Desenvolvimento Backend (PHP, Java, Python)</li>
-            <li>Frameworks (Laravel, Spring Boot, Django, FastAPI)</li>
-            <li>Desenvolvimento Web (HTML, CSS, JavaScript, Astro)</li>
-            <li>APIs REST e Integração de Sistemas</li>
-            <li>Programação Orientada a Objetos</li>
-            <li>Banco de Dados e SQL</li>
-            <li>Arquitetura em Camadas e MVC</li>
-            <li>Git e GitHub</li>
-            <li>Docker e Linux</li>
+            <li><strong>Linguagens:</strong> PHP, Java, Python, Node.js, JavaScript</li>
+            <li><strong>Bancos de Dados:</strong> OracleDB, PostgreSQL, MySQL, SQL</li>
+            <li><strong>Arquitetura & APIs:</strong> APIs RESTful, Microsserviços, Integração de Sistemas, MVC</li>
+            <li><strong>Sistemas & Suporte:</strong> Sustentação de Aplicações Bancárias</li>
+            <li><strong>Ferramentas & DevOps:</strong> Git, GitHub, Docker, Linux</li>
+            <li><strong>Engenharia de Software:</strong> Programação Orientada a Objetos (POO), Manutenção e Evolução de Código</li>
           </ul>
         </section>
 
         <section class="section">
-          <h3 class="section-title">FORMAÇÃO</h3>
+          <h3 class="section-title">FORMAÇÃO ACADÊMICA</h3>
           <div class="edu-item">
             <div class="edu-left">
               <strong>Univesp</strong>
               <p>2026 – Cursando</p>
             </div>
-            <div class="edu-right">Engenharia de Computação</div>
+            <div class="edu-right">Bacharelado em Engenharia de Computação</div>
           </div>
         </section>
 
@@ -121,10 +154,10 @@ import '../styles/global.css';
 
       </aside>
 
-      <!-- Coluna Direita (Experiência) -->
+      <!-- Coluna Direita (Experiência Profissional) -->
       <section class="career-section">
 
-        <h3 class="section-title">CARREIRA</h3>
+        <h3 class="section-title">CARREIRA PROFISSIONAL</h3>
 
         <article class="job-item">
           <div class="job-year">2026 - 2026</div>
@@ -136,15 +169,12 @@ import '../styles/global.css';
             </div>
 
             <p>
-              Desenvolvimento e manutenção de aplicações web, automações e
-              soluções para necessidades internas, utilizando tecnologias
-              modernas do ecossistema web.
+              Atuação em Sustentação a aplicações bancárias, garantindo a alta disponibilidade, estabilidade e segurança dos ambientes financeiros.
             </p>
 
             <ul>
-              <li>Desenvolvimento de aplicações web e automações.</li>
-              <li>Utilização de JavaScript, Astro, Git e GitHub.</li>
-              <li>Desenvolvimento com foco em organização, manutenção e performance.</li>
+              <li>Ssustentação focado em <strong>aplicações bancárias</strong> e ecossistemas financeiros de missão crítica.</li>
+              <li>Desenvolvimento de automações web e ferramentas de apoio interno utilizando tecnologias modernas (JavaScript,Python, Git).</li>
             </ul>
           </div>
         </article>
@@ -159,16 +189,15 @@ import '../styles/global.css';
             </div>
 
             <p>
-              Desenvolvimento e manutenção de sistemas, aplicações web,
-              APIs e integrações entre sistemas, atuando na evolução e
-              sustentação de soluções de software.
+              Desenvolvimento e arquitetura de soluções de software voltadas para o mercado imobiliário,
+              atuando na criação de APIs, integrações de sistemas complexos e gestão de dados corporativos.
             </p>
 
             <ul>
-              <li>Desenvolvimento de aplicações utilizando PHP e Java.</li>
-              <li>Desenvolvimento e integração de APIs REST.</li>
-              <li>Utilização de bancos de dados relacionais e SQL.</li>
-              <li>Manutenção e evolução de sistemas existentes.</li>
+              <li>Desenvolvimento e evolução de sistemas backend utilizando <strong>PHP, Java e Python</strong>.</li>
+              <li>Criação de <strong>APIs RESTful em Node.js</strong> para viabilizar integrações entre ferramentas e parceiros externos.</li>
+              <li>Modelagem, consultas avançadas e sustentação em bancos de dados <strong>OracleDB, MySQL e PostgreSQL</strong>.</li>
+              <li>Manutenção preventiva/corretiva e otimização de performance em ecossistemas do setor imobiliário.</li>
             </ul>
           </div>
         </article>
@@ -183,16 +212,13 @@ import '../styles/global.css';
             </div>
 
             <p>
-              Desenvolvimento e manutenção de sistemas, participando da
-              implementação de funcionalidades, correções e integração
-              entre aplicações.
+              Desenvolvimento e manutenção de sistemas corporativos, participando ativamente da implementação de novas funcionalidades, refatoração e consumo de APIs.
             </p>
 
             <ul>
-              <li>Desenvolvimento de aplicações web.</li>
-              <li>Programação orientada a objetos.</li>
-              <li>Integração entre sistemas e APIs.</li>
-              <li>Versionamento de código utilizando Git.</li>
+              <li>Desenvolvimento de aplicações web aplicando padrões de Programação Orientada a Objetos.</li>
+              <li>Integração entre sistemas via APIs REST e microsserviços.</li>
+              <li>Versionamento de código e colaboração contínua utilizando Git/GitHub.</li>
             </ul>
           </div>
         </article>
@@ -202,20 +228,18 @@ import '../styles/global.css';
 
           <div class="job-details">
             <div class="job-header">
-              <span class="job-title">DESENVOLVEDOR DE SOFTWARE JUNIOR</span>
+              <span class="job-title">DESENVOLVEDOR DE SOFTWARE JÚNIOR</span>
               <span class="company-name">It Lean</span>
             </div>
 
             <p>
-              Desenvolvimento e manutenção de aplicações web, atuando na
-              implementação de funcionalidades e correções em sistemas.
+              Desenvolvimento e manutenção de aplicações web, atuando na implementação de funcionalidades e resolução de chamados técnicos.
             </p>
 
             <ul>
-              <li>Desenvolvimento de aplicações web.</li>
-              <li>Manutenção e correção de sistemas.</li>
-              <li>Desenvolvimento utilizando PHP e JavaScript.</li>
-              <li>Versionamento de código com Git.</li>
+              <li>Desenvolvimento e sustentação de sistemas web utilizando PHP e JavaScript.</li>
+              <li>Manutenção corretiva, evolução de código e consultas SQL.</li>
+              <li>Controle de versão de código-fonte com Git.</li>
             </ul>
           </div>
         </article>
@@ -230,14 +254,12 @@ import '../styles/global.css';
             </div>
 
             <p>
-              Atendimento e suporte a clientes, atuando na resolução de
-              problemas e orientação sobre produtos e serviços.
+              Atendimento e suporte ao cliente, foco em diagnóstico ágil e resolução de problemas operacionais.
             </p>
 
             <ul>
-              <li>Atendimento ao cliente.</li>
-              <li>Identificação e resolução de problemas.</li>
-              <li>Registro e acompanhamento de solicitações.</li>
+              <li>Atendimento técnico e suporte direto a clientes.</li>
+              <li>Identificação, análise e resolução de problemas de comunicação.</li>
             </ul>
           </div>
         </article>
